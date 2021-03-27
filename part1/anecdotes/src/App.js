@@ -26,6 +26,14 @@ const App = () => {
 
     setPoints(copyOfPoints)
   }
+  let max = 0
+  let maxIndex = 0;
+  points.forEach((x,i) => {
+    if (x > max){
+      max = x
+      maxIndex = i
+    }
+  })
 
   return (
     <div>
@@ -33,6 +41,12 @@ const App = () => {
       has {points[selected]} votes<br/>
       <button onClick={() => {vote(selected)}}>vote</button>
       <button onClick={() => {randomNumer()}}>next anecdote</button>
+
+      <br/><br/>
+      Anecdote with most votes<br/><br/>
+      {anecdotes[maxIndex]}<br/>
+      has {max} votes<br/>
+
     </div>
   )
 }
