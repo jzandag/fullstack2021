@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from './Button'
 import Statistics from './Statistics'
 
 const App = () => {
@@ -12,9 +13,10 @@ const App = () => {
     <div>
       give feedback
       <br/><br/>
-      <button onClick={() => setGood(good +1)}>good</button>
-      <button onClick={() => setNeutral(neutral +1)}>neutral</button>
-      <button onClick={() => setBad(bad +1)}>bad</button>
+      
+      <Button handleOperation={() => setGood(good +1)}>good</Button>
+      <Button handleOperation={() => setNeutral(neutral +1)}>neutral</Button>
+      <Button handleOperation={() => setBad(bad +1)}>bad</Button>
       <br/><br/>
       <Statistics good={good} bad={bad} neutral={neutral} all={all}/>
       
