@@ -3,12 +3,10 @@ import React from 'react'
 const Statistic = props => {
 
     return (
-        <div>
-            
-            {props.text} {props.value}{props.text === "positive" ? "%" : null}<br/>
-            
-            
-        </div>
+        <tr>
+            <td>{props.text}</td>
+            <td>{props.value}{props.text === "positive" ? "%" : null}</td>
+        </tr>
     )
 }
 
