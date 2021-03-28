@@ -11,7 +11,7 @@ const App = () => {
   ]
   
   const [points, setPoints] = useState(new Array(anecdotes.length).join('0').split('').map(parseFloat))
-
+  
   const [selected, setSelected] = useState(0)
 
   const randomNumer = () =>  {
